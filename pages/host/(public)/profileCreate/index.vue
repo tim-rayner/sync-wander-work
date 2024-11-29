@@ -132,6 +132,17 @@ const steps = ref<OnboardingStep[]>([
         next: 9,
         prev: 7,
     },
+    {
+        id: 9,
+        title: "Looking good, now lets sign you up",
+        subtitle:
+            "To continue with the host account onboarding, please sign up using your email address or phone number",
+        component: StepNine,
+        active: false,
+        completed: false,
+        next: null,
+        prev: 8,
+    },
 ]);
 
 const activeStep = computed(() => steps.value.find((step) => step.active) || steps.value[0]);
@@ -171,17 +182,19 @@ const prev = () => {
 <template>
     <div class="wrapper h-screen flex flex-col">
         <div class="header flex justify-center">
-            <div class="flex">{{ activeStep?.title }}</div>
+            <div class="flex"></div>
         </div>
         <div class="content flex-1 flex">
-            <div class="onboarding flex-1">
+            <div class="onboarding flex-1 content-center justify-center container">
                 <component :is="activeStep?.component" />
             </div>
         </div>
-        <div class="flex justify-between">
-            <div class="btn" @click="prev">BACK</div>
+        <div class="flex justify-between p-4">
+            <div class="btn btn-outline w-[150px] md:w-[300px]" @click="prev">BACK</div>
             <div class="flex"></div>
-            <div class="btn" @click="next">{{ activeStep.id === steps.length ? "Finish" : "Next" }}</div>
+            <div class="btn btn-active w-[150px] md:w-[300px]" @click="next">
+                {{ activeStep.id === steps.length ? "Finish" : "Next" }}
+            </div>
         </div>
     </div>
 </template>
