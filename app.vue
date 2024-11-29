@@ -3,7 +3,7 @@
         <NuxtRouteAnnouncer />
         <NuxtLoadingIndicator />
         <NuxtLayout>
-            <main>
+            <main class="min-h-dvh flex flex-col">
                 <NuxtPage />
             </main>
         </NuxtLayout>
