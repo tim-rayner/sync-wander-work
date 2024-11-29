@@ -3,7 +3,7 @@ import ShowcaseListing from "@/components/ShowcaseListing.vue";
 </script>
 
 <template>
-    <div class="flex flex-row my-12">
+    <div class="flex flex-row my-12 cursor-grab">
         <div class="w-[500px] h-[250px] flex flex-col mx-2">
             <ShowcaseListing
                 img="https://images.pexels.com/photos/463734/pexels-photo-463734.jpeg?auto=compress&cs=tinysrgb&w=600"

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import video from "@/assets/video/bg-vid1.mp4";
+
+//redirect with router
 </script>
 
 <template>
@@ -18,8 +20,8 @@ import video from "@/assets/video/bg-vid1.mp4";
             <h1 class="font-bold text-5xl">SLOGAN GOES HERE</h1>
             <p class="text-lg mt-3">Subtext goes here</p>
             <div class="relative flex justify-center mt-12">
-                <button class="btn btn-accent">Start Working</button>
-                <button class="btn btn-active ml-3">Start Hosting</button>
+                <NuxtLink to="/explorer" class="btn btn-accent">Start Working</NuxtLink>
+                <NuxtLink to="/host" class="btn btn-active ml-3">Start Hosting</NuxtLink>
             </div>
         </div>
     </div>

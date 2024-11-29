@@ -5,9 +5,11 @@ import ShowcaseCarousel from "@/components/ShowcaseCarousel.vue";
 </script>
 
 <template>
-    <HomeHero />
-    <div class="container">
-        <ShowcaseCarousel />
-        <AboutUs />
+    <div>
+        <HomeHero />
+        <div class="container">
+            <ShowcaseCarousel />
+            <AboutUs />
+        </div>
     </div>
 </template>
