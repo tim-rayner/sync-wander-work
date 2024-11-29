@@ -10,8 +10,31 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/fonts": "^0.10.2",
+    "@nuxt/icon": "^1.8.2",
+    "@nuxt/image": "^1.8.1",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@stylistic/eslint-plugin-ts": "^2.11.0",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
+    "@vueuse/nuxt": "^11.3.0",
     "nuxt": "^3.14.1592",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@morev/vue-transitions": "^3.0.5",
+    "@tailwindcss/typography": "^0.5.15",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0",
+    "daisyui": "^4.12.14",
+    "eslint": "^9.15.0",
+    "eslint-plugin-anti-trojan-source": "^1.1.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-security-node": "^1.1.4",
+    "eslint-plugin-tailwindcss": "^3.17.5",
+    "eslint-plugin-vue": "^9.3.0"
   }
 }
