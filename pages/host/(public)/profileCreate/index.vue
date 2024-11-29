@@ -8,6 +8,7 @@ import StepFive from "~/components/features/host-create/StepFive.vue";
 import StepEight from "~/components/features/host-create/StepEight.vue";
 import StepSeven from "~/components/features/host-create/StepSeven.vue";
 import StepNine from "~/components/features/host-create/StepNine.vue";
+import FinalStep from "~/components/features/host-create/FinalStep.vue";
 
 export interface OnboardingStep {
     id: number;
@@ -137,7 +138,7 @@ const steps = ref<OnboardingStep[]>([
         title: "Looking good, now lets sign you up",
         subtitle:
             "To continue with the host account onboarding, please sign up using your email address or phone number",
-        component: StepNine,
+        component: FinalStep,
         active: false,
         completed: false,
         next: null,
@@ -147,6 +148,20 @@ const steps = ref<OnboardingStep[]>([
 
 const activeStep = computed(() => steps.value.find((step) => step.active) || steps.value[0]);
 const router = useRouter();
+
+const model = ref<HostOnboardingModel>({
+    location: {
+        lat: 0,
+        lng: 0,
+    },
+    firstResovationType: FirstResovationType.any,
+    bookingSettings: bookingSetting.instantBook,
+    accomDescription: "",
+    workloadCatagory: workloadCatagory.farm,
+    workplaceTitle: "",
+    workplacePhotos: [],
+    workplaceOfferings: {},
+});
 
 definePageMeta({
     layout: "on-boarding-minimal",
@@ -177,6 +192,14 @@ const prev = () => {
         router.push("/");
     }
 };
+
+watch(
+    model,
+    (newValue) => {
+        console.log(newValue);
+    },
+    { deep: true }
+); // Log the model whenever it changes
 </script>
 
 <template>
@@ -186,13 +209,13 @@ const prev = () => {
         </div>
         <div class="content flex-1 flex">
             <div class="onboarding flex-1 content-center justify-center container">
-                <component :is="activeStep?.component" />
+                <component :is="activeStep?.component" v-model:model="model" />
             </div>
         </div>
         <div class="flex justify-between p-4">
             <div class="btn btn-outline w-[150px] md:w-[300px]" @click="prev">BACK</div>
             <div class="flex"></div>
-            <div class="btn btn-active w-[150px] md:w-[300px]" @click="next">
+            <div class="btn btn-neutral w-[150px] md:w-[300px]" @click="next">
                 {{ activeStep.id === steps.length ? "Finish" : "Next" }}
             </div>
         </div>

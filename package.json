@@ -15,9 +15,11 @@
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@stylistic/eslint-plugin-ts": "^2.11.0",
+    "@types/leaflet": "^1.9.14",
     "@typescript-eslint/eslint-plugin": "^8.16.0",
     "@typescript-eslint/parser": "^8.16.0",
     "@vueuse/nuxt": "^11.3.0",
+    "leaflet": "^1.9.4",
     "nuxt": "^3.14.1592",
     "vue": "latest",
     "vue-router": "latest"
