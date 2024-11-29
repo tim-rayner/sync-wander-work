@@ -16,9 +16,7 @@
                 </div>
 
                 <div class="flex items-center justify-end">
-                    <NuxtLink to="/about" class="mx-2">About</NuxtLink>
-                    <NuxtLink to="/contact" class="mx-2">Contact</NuxtLink>
-                    <NuxtLink to="/login" class="mx-2">Login</NuxtLink>
+                    <NuxtLink to="/explorer" class="mx-2">Noob</NuxtLink>
                 </div>
             </div>
         </header>
