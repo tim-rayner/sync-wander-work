@@ -4,6 +4,8 @@ import type { HostOnboardingModel } from "~/pages/host/(public)/profileCreate/in
 
 import { watch, defineProps, defineEmits, reactive, toRaw, shallowRef } from "vue";
 
+import HostSignUp from "./HostSignUp.vue";
+
 // Define props and emit
 const props = defineProps({
     model: {
@@ -47,4 +49,5 @@ watch(
 <template>
     <h2 class="text-4xl mb-3">Looking good, now lets sign you up</h2>
     <p>To continue with the host account onboarding, please sign up using your email address or phone number</p>
+    <HostSignUp />
 </template>

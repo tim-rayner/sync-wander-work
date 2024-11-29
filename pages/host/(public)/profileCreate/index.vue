@@ -176,6 +176,7 @@ const next = () => {
             nextStep.active = true;
         } else {
             currentStep.active = true; // Keep the current step active if there's no next step
+            router.push("/host/profileOverview");
         }
     }
 };

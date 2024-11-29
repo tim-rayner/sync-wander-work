@@ -2,8 +2,8 @@
     <div
         class="sticky top-0 z-50 w-full h-[75px] bg-transparent py-2 shadow-none transition-all duration-500 flex items-center"
         :class="{
-            'text-white': yScroll < 20,
-            'bg-white !shadow-lg ': yScroll > 20 && animationIsLive,
+            'text-white': isHomePage && yScroll < 20,
+            'bg-white !shadow-lg ': !isHomePage || (yScroll > 20 && animationIsLive),
         }"
     >
         <header class="container flex items-center justify-center h-full">
@@ -35,4 +35,6 @@ if (import.meta.client) {
 }
 
 const { y: yScroll } = useWindowScroll();
+const route = useRoute();
+const isHomePage = computed(() => route.path === "/");
 </script>
