@@ -1,41 +1,42 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    compatibilityDate: '2024-04-03',
+    compatibilityDate: "2024-04-03",
     devtools: { enabled: true },
     modules: [
-        '@nuxtjs/tailwindcss',
-        '@nuxt/fonts',
-        '@nuxt/image',
-        '@vueuse/nuxt',
-        '@nuxt/icon',
-        '@morev/vue-transitions/nuxt'
+        "@nuxtjs/tailwindcss",
+        "@nuxt/fonts",
+        "@nuxt/image",
+        "@vueuse/nuxt",
+        "@nuxt/icon",
+        "@morev/vue-transitions/nuxt",
     ],
 
+    ssr: false,
     experimental: {
         typedPages: true,
         payloadExtraction: true,
         renderJsonPayloads: true,
         inlineRouteRules: true,
-        buildCache: true
+        buildCache: true,
     },
 
-    css: ['@/assets/css/main.css'],
+    css: ["@/assets/css/main.css"],
 
     vueTransitions: {
         defaultProps: {
-            mode: 'out-in'
-        }
+            mode: "out-in",
+        },
     },
 
     app: {
         head: {
-            title: 'WanderWork',
+            title: "WanderWork",
             htmlAttrs: {
-                lang: 'en'
+                lang: "en",
             },
             meta: [
-                { charset: 'utf-8' },
-                { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=10, user-scalable=1' }
+                { charset: "utf-8" },
+                { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=10, user-scalable=1" },
             ],
             link: [
                 // https://realfavicongenerator.net
@@ -46,19 +47,15 @@ export default defineNuxtConfig({
                 // { rel: 'shortcut icon', href: '/favicon.ico?v=1' },
                 // { rel: 'manifest', href: '/manifest.json' }
             ],
-            noscript: [
-                { innerHTML: 'This website requires JavaScript.' }
-            ]
+            noscript: [{ innerHTML: "This website requires JavaScript." }],
         },
         pageTransition: {
-            name: 'fade',
-            mode: 'out-in'
-        }
+            name: "fade",
+            mode: "out-in",
+        },
     },
 
     fonts: {
-        families: [
-            { name: 'Nunito Sans', provider: 'google' }
-        ]
-    }
+        families: [{ name: "Nunito Sans", provider: "google" }],
+    },
 });

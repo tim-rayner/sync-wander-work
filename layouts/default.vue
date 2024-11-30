@@ -9,8 +9,5 @@
         </div>
 
         <Footer />
-        <DevOnly>
-            <DevSizeIndicator />
-        </DevOnly>
     </div>
 </template>

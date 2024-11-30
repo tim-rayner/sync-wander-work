@@ -1,0 +1,63 @@
+<script setup lang="ts">
+import type { PropType } from "vue";
+import type { HostOnboardingModel } from "~/pages/host/(public)/profileCreate/index.vue";
+
+import { watch, defineProps, defineEmits, reactive, toRaw, shallowRef } from "vue";
+
+// Define props and emit
+const props = defineProps({
+    model: {
+        type: Object as PropType<HostOnboardingModel>,
+        required: true,
+    },
+});
+const emit = defineEmits(["update:model"]);
+
+// Create a reactive copy of the model
+const localModel = reactive(JSON.parse(JSON.stringify(props.model)));
+
+// Add a property to localModel for the selected option
+localModel.selectedOption = localModel.selectedOption || "";
+
+// Flag to prevent circular updates
+let updatingFromParent = false;
+
+// Sync localModel with props.model (from parent updates)
+watch(
+    () => props.model,
+    (newValue) => {
+        if (!updatingFromParent) {
+            Object.assign(localModel, newValue);
+        }
+    },
+    { deep: true }
+);
+
+// Emit changes to the parent (from child updates)
+watch(
+    localModel,
+    (newValue) => {
+        if (!updatingFromParent) {
+            updatingFromParent = true;
+            emit("update:model", toRaw(newValue));
+            updatingFromParent = false;
+        }
+    },
+    { deep: true }
+);
+</script>
+
+<template>
+    <h3 class="mb-3">Step 2</h3>
+    <h2 class="text-4xl mb-3">Choose who to welcome for your first reservation</h2>
+    <p>After your first guest, anyone can book your place. <a href="#" class="underline">Learn more</a>.</p>
+
+    <div>
+        <input type="radio" id="any" value="any" v-model="localModel.selectedOption" />
+        <label for="any"> Any Adventurer</label>
+    </div>
+    <div>
+        <input type="radio" id="experienced" value="experienced" v-model="localModel.selectedOption" />
+        <label for="experienced"> An Experienced Adventurer</label>
+    </div>
+</template>
