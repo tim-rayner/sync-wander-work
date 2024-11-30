@@ -52,11 +52,11 @@ watch(
     <h2 class="text-4xl mb-3">choose who to welcome for your first reservation</h2>
     <p>after your first guest, anyone can book your place. <a href="#" class="underline">Learn more</a>.</p>
 
-    <div>
+    <div class="border rounded-lg px-5 py-2 my-5 flex items-center gap-2">
         <input type="radio" id="any" value="any" v-model="localModel.selectedOption" />
         <label for="any"> any adventurer</label>
     </div>
-    <div>
+    <div class="border rounded-lg px-5 py-2 my-5 flex items-center gap-2">
         <input type="radio" id="experienced" value="experienced" v-model="localModel.selectedOption" />
         <label for="experienced"> an experienced adventurer</label>
     </div>

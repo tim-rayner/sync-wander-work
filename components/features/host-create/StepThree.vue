@@ -51,11 +51,11 @@ watch(
     <h2 class="text-4xl mb-3">pick your booking settings</h2>
     <p>You can change this at any time <a href="#" class="underline">Learn more</a>.</p>
 
-    <div>
+    <div class="border rounded-lg px-5 py-2 my-5 flex items-center gap-2">
         <input type="radio" id="approve" value="approve" v-model="localModel.bookingOption" />
         <label for="approve"> approve your first 5 bookings</label>
     </div>
-    <div>
+    <div class="border rounded-lg px-5 py-2 my-5 flex items-center gap-2">
         <input type="radio" id="instant" value="instant" v-model="localModel.bookingOption" />
         <label for="instant"> use instant book</label>
     </div>
