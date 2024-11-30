@@ -48,8 +48,8 @@ watch(
 </script>
 
 <template>
-    <h2 class="text-4xl mb-3">Next, lets give your workplace a title</h2>
-    <p>Short titles work best. Have fun with it - you can always change it later</p>
+    <h2 class="text-4xl mb-3">Next, tell us your story</h2>
+    <p>Tell us more about you. Keep it short, but have fun with it - you can always change it later</p>
     <textarea
         v-model="localModel.title"
         placeholder="Give your workplace a title"

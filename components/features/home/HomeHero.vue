@@ -5,7 +5,7 @@ import video from "@/assets/video/bg-vid1.mp4";
 </script>
 
 <template>
-    <div class="relative -mt-[77px] h-[65vh] flex items-center justify-center">
+    <div class="relative -mt-[77px] h-[105vh] flex items-center justify-center">
         <div class="overlay bg-gray-800 absolute w-full h-full opacity-50 z-30"></div>
         <video
             autoplay
@@ -21,14 +21,14 @@ import video from "@/assets/video/bg-vid1.mp4";
             <p class="text-2xl mt-3">start your journey today</p>
             <div class="relative flex justify-center mt-12">
                 <NuxtLink
+                    to="/host/profileCreate"
+                    class="block w-full py-3 px-6 bg-black text-xl text-white rounded-md text-center font-medium mx-3"
+                    >start hosting</NuxtLink
+                >
+                <NuxtLink
                     to="/explorer"
                     class="block w-full py-3 px-6 bg-pink-700 text-xl text-white rounded-md text-center font-medium mx-3"
                     >start wandering</NuxtLink
-                >
-                <NuxtLink
-                    to="/host/profileCreate"
-                    class="block w-full py-3 px-6 bg-pink-700 text-xl text-white rounded-md text-center font-medium mx-3"
-                    >start hosting</NuxtLink
                 >
             </div>
         </div>
