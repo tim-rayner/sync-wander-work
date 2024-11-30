@@ -23,12 +23,12 @@ import video from "@/assets/video/bg-vid1.mp4";
                 <NuxtLink
                     to="/host/profileCreate"
                     class="flex items-center justify-center w-full py-3 px-6 bg-black text-xl text-white rounded-md text-center font-medium mx-3"
-                    >start hosting</NuxtLink
+                    >host</NuxtLink
                 >
                 <NuxtLink
                     to="/explorer"
                     class="block w-full py-3 px-6 bg-pink-700 text-xl text-white rounded-md text-center font-medium mx-3"
-                    >start wandering</NuxtLink
+                    >wanderer</NuxtLink
                 >
             </div>
         </div>
