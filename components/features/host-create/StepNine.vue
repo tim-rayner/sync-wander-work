@@ -49,10 +49,10 @@ watch(
 const WorkplaceOfferings = [
     "Farming",
     "Beach Access",
-    "Mountain Views",
-    "Activities by Host",
+    "Mountains",
+    "Activities",
     "Pet Friendly",
-    "Family Friendly",
+    "Family",
     "Private Space",
     "Shared Space",
     "Work Space",
@@ -63,8 +63,8 @@ const WorkplaceOfferings = [
 </script>
 
 <template>
-    <h2 class="text-4xl mb-3">Tell us what your place has to offer</h2>
-    <p>You can add more after you publish your listing</p>
+    <h2 class="text-4xl mb-3">tell us what your space has to offer</h2>
+    <p>you can add more after you publish your listing</p>
 
     <!-- DasiyUI badges in a responsive grid layout - clear and concise -->
     <div class="">
@@ -72,7 +72,7 @@ const WorkplaceOfferings = [
             <div
                 v-for="offering in WorkplaceOfferings"
                 :key="offering"
-                class="p-4 border w-fit badge badge-neutral cursor-pointer"
+                class="p-4 border w-full badge badge-neutral cursor-pointer"
             >
                 {{ offering }}
             </div>

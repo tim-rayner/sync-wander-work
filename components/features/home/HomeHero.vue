@@ -22,7 +22,7 @@ import video from "@/assets/video/bg-vid1.mp4";
             <div class="relative flex justify-center mt-12">
                 <NuxtLink
                     to="/host/profileCreate"
-                    class="block w-full py-3 px-6 bg-black text-xl text-white rounded-md text-center font-medium mx-3"
+                    class="flex items-center justify-center w-full py-3 px-6 bg-black text-xl text-white rounded-md text-center font-medium mx-3"
                     >start hosting</NuxtLink
                 >
                 <NuxtLink

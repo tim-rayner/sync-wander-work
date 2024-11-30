@@ -49,8 +49,9 @@ const updateImages = (images: string[]) => {
 </script>
 
 <template>
-    <h2 class="text-4xl mb-3">Add some photos of your workplace</h2>
-    <p>You'll need 5 photos to get started. You can add more or make changes later</p>
-
-    <ImageUpload @update-images="updateImages" :initial-images="model.workplacePhotos" />
+    <h2 class="text-4xl mb-3">add some photos of your workplace</h2>
+    <p>you'll need 5 photos to get started. you can add more or make changes later</p>
+    <div class="my-4">
+        <ImageUpload @update-images="updateImages" :initial-images="model.workplacePhotos" />
+    </div>
 </template>

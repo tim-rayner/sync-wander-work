@@ -54,33 +54,41 @@ watch(
     aqua = "Aqua/Marine",
 } -->
 <template>
-    <h3 class="mb-3">Step 4</h3>
-    <h2 class="text-4xl mb-3">Next, lefts describe your workload</h2>
+    <h3 class="mb-3">step 4</h3>
+    <h2 class="text-4xl mb-3">next, lefts describe your workload</h2>
 
     <!-- loop through enum workloadCatagory then display pills -->
     <div>
-        <p>Choose up to 2 highlights. We'll use these to get your description started</p>
+        <p>choose up to 2 highlights. we'll use these to get your description started</p>
         <div>
-            <div>
-                <input type="checkbox" id="farm" value="Farm" v-model="localModel.selectedHighlights" />
-                <label for="farm">Farm</label>
+            <div class="border rounded-lg px-5 py-2 my-5 flex gap-2">
+                <input type="checkbox" id="home" value="home" v-model="localModel.selectedHighlights" />
+                <label for="farm" class="text-lg">home improvements</label>
             </div>
-            <div>
-                <input
-                    type="checkbox"
-                    id="houseSitting"
-                    value="House Sitting"
-                    v-model="localModel.selectedHighlights"
-                />
-                <label for="houseSitting">House Sitting</label>
+
+            <div class="border rounded-lg px-5 py-2 my-5 flex gap-2">
+                <input type="checkbox" id="gardening" value="gardening" v-model="localModel.selectedHighlights" />
+                <label for="farm" class="text-lg">gardening</label>
             </div>
-            <div>
-                <input type="checkbox" id="dogSitting" value="Dog Sitting" v-model="localModel.selectedHighlights" />
-                <label for="dogSitting">Dog Sitting</label>
+
+            <div class="border rounded-lg px-5 py-2 my-5 flex gap-2">
+                <input type="checkbox" id="houseSitting" value="houseSitting" v-model="localModel.selectedHighlights" />
+                <label for="farm" class="text-lg">house sitting</label>
             </div>
-            <div>
-                <input type="checkbox" id="aqua" value="Aqua/Marine" v-model="localModel.selectedHighlights" />
-                <label for="aqua">Aqua/Marine</label>
+
+            <div class="border rounded-lg px-5 py-2 my-5 flex gap-2">
+                <input type="checkbox" id="tech" value="tech" v-model="localModel.selectedHighlights" />
+                <label for="farm" class="text-lg">tech</label>
+            </div>
+
+            <div class="border rounded-lg px-5 py-2 my-5 flex gap-2">
+                <input type="checkbox" id="animalCare" value="animalCare" v-model="localModel.selectedHighlights" />
+                <label for="farm" class="text-lg">animal care</label>
+            </div>
+
+            <div class="border rounded-lg px-5 py-2 my-5 flex gap-2">
+                <input type="checkbox" id="labour" value="labour" v-model="localModel.selectedHighlights" />
+                <label for="farm" class="text-lg">labour</label>
             </div>
         </div>
     </div>

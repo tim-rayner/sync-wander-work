@@ -98,17 +98,21 @@ onMounted(() => {
 </script>
 
 <template>
-    <h3 class="mb-3">Step 1</h3>
-    <h2 class="text-4xl mb-3">Tell us about your place</h2>
+    <h3 class="mb-3">step 1</h3>
+    <h2 class="text-4xl mb-3">tell us about your place</h2>
     <p>
-        In this step, we'll ask you which type of property you have, as well as what kind of work you're offering out to
+        in this step, we'll ask you which type of property you have, as well as what kind of work you're offering out to
         our adventurers.
     </p>
 
     <div
         ref="mapContainer"
-        class="map-container h-[500px] w-1/2 border-slate-600 border-1 rounded-xl mt-6 !shadow-lg"
+        class="map-container h-[400px] w-full border-slate-600 border-1 rounded-xl mt-6 !shadow-lg"
     ></div>
+
+    <div class="text-center underline mt-6">
+        <p>manual address input</p>
+    </div>
 </template>
 
 <style></style>

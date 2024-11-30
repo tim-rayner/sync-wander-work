@@ -48,16 +48,16 @@ watch(
 </script>
 
 <template>
-    <h3 class="mb-3">Step 2</h3>
-    <h2 class="text-4xl mb-3">Choose who to welcome for your first reservation</h2>
-    <p>After your first guest, anyone can book your place. <a href="#" class="underline">Learn more</a>.</p>
+    <h3 class="mb-3">step 2</h3>
+    <h2 class="text-4xl mb-3">choose who to welcome for your first reservation</h2>
+    <p>after your first guest, anyone can book your place. <a href="#" class="underline">Learn more</a>.</p>
 
     <div>
         <input type="radio" id="any" value="any" v-model="localModel.selectedOption" />
-        <label for="any"> Any Adventurer</label>
+        <label for="any"> any adventurer</label>
     </div>
     <div>
         <input type="radio" id="experienced" value="experienced" v-model="localModel.selectedOption" />
-        <label for="experienced"> An Experienced Adventurer</label>
+        <label for="experienced"> an experienced adventurer</label>
     </div>
 </template>

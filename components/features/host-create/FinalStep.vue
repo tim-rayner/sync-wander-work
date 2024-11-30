@@ -47,7 +47,7 @@ watch(
 </script>
 
 <template>
-    <h2 class="text-4xl mb-3">Looking good, now lets sign you up</h2>
-    <p>To continue with the host account onboarding, please sign up using your email address or phone number</p>
+    <h2 class="text-4xl mb-3">looking good, now lets sign you up</h2>
+    <p>to continue with the host account onboarding, please sign up using your email address or phone number</p>
     <HostSignUp />
 </template>

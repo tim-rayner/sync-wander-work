@@ -33,19 +33,17 @@ const logoSrc = computed(() => {
         }"
     >
         <header class="container flex items-center justify-center h-full">
-            <div class="flex items-center justify-between content-center w-full">
-                <div class="flex items-center">
-                    <NuxtLink to="/" class="flex items-center">
-                        <img :src="logoSrc" alt="Wanderwork" class="h-8 w-auto" />
-                    </NuxtLink>
-                </div>
+            <div class="flex items-center">
+                <NuxtLink to="/" class="flex items-center">
+                    <img :src="logoSrc" alt="Wanderwork" class="h-8 w-auto" />
+                </NuxtLink>
+            </div>
 
-                <!-- <div class="flex items-center justify-end">
+            <!-- <div class="flex items-center justify-end">
                     <NuxtLink to="/about" class="mx-2">About</NuxtLink>
                     <NuxtLink to="/contact" class="mx-2">Contact</NuxtLink>
                     <NuxtLink to="/login" class="mx-2">Login</NuxtLink>
                 </div> -->
-            </div>
         </header>
     </div>
 </template>

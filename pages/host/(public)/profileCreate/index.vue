@@ -33,10 +33,12 @@ enum bookingSetting {
 }
 
 enum workloadCatagory {
-    farm = "Farm",
-    houseSitting = "House Sitting",
-    dogSitting = "Dog Sitting",
-    aqua = "Aqua/Marine",
+    home = "home improvements",
+    gardening = "gardening",
+    houseSitting = "house sitting",
+    tech = "tech",
+    animalCare = "animal care",
+    labour = "basic labour",
 }
 
 export type HostOnboardingModel = {
