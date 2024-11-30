@@ -61,34 +61,34 @@ watch(
     <div>
         <p>choose up to 2 highlights. we'll use these to get your description started</p>
         <div>
-            <div class="border rounded-lg px-5 py-2 my-5 flex gap-2">
+            <div class="border rounded-lg px-5 py-2 my-5 flex items-center gap-2">
                 <input type="checkbox" id="home" value="home" v-model="localModel.selectedHighlights" />
-                <label for="farm" class="text-lg">home improvements</label>
+                <label for="home" class="text-lg">home improvements</label>
             </div>
 
-            <div class="border rounded-lg px-5 py-2 my-5 flex gap-2">
+            <div class="border rounded-lg px-5 py-2 my-5 flex items-center gap-2">
                 <input type="checkbox" id="gardening" value="gardening" v-model="localModel.selectedHighlights" />
-                <label for="farm" class="text-lg">gardening</label>
+                <label for="gardening" class="text-lg">gardening</label>
             </div>
 
-            <div class="border rounded-lg px-5 py-2 my-5 flex gap-2">
+            <div class="border rounded-lg px-5 py-2 my-5 flex items-center gap-2">
                 <input type="checkbox" id="houseSitting" value="houseSitting" v-model="localModel.selectedHighlights" />
-                <label for="farm" class="text-lg">house sitting</label>
+                <label for="houseSitting" class="text-lg">house sitting</label>
             </div>
 
-            <div class="border rounded-lg px-5 py-2 my-5 flex gap-2">
+            <div class="border rounded-lg px-5 py-2 my-5 flex items-center gap-2">
                 <input type="checkbox" id="tech" value="tech" v-model="localModel.selectedHighlights" />
-                <label for="farm" class="text-lg">tech</label>
+                <label for="tech" class="text-lg">tech</label>
             </div>
 
-            <div class="border rounded-lg px-5 py-2 my-5 flex gap-2">
+            <div class="border rounded-lg px-5 py-2 my-5 flex items-center gap-2">
                 <input type="checkbox" id="animalCare" value="animalCare" v-model="localModel.selectedHighlights" />
-                <label for="farm" class="text-lg">animal care</label>
+                <label for="animalCare" class="text-lg">animal care</label>
             </div>
 
-            <div class="border rounded-lg px-5 py-2 my-5 flex gap-2">
+            <div class="border rounded-lg px-5 py-2 my-5 flex items-center gap-2">
                 <input type="checkbox" id="labour" value="labour" v-model="localModel.selectedHighlights" />
-                <label for="farm" class="text-lg">labour</label>
+                <label for="labour" class="text-lg">labour</label>
             </div>
         </div>
     </div>
