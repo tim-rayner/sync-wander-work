@@ -32,7 +32,12 @@
                     </div>
                     <!-- Submit -->
                     <div class="form-control mt-6">
-                        <button type="submit" class="btn btn-secondary w-full">Sign Up</button>
+                        <button
+                            type="submit"
+                            class="py-3 px-6 bg-pink-700 text-xl text-white rounded-md text-center font-medium w-full mx-auto"
+                        >
+                            Sign Up
+                        </button>
                     </div>
                 </form>
             </div>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Heart from "@/pages/explorer/components/Heart.vue";
 import StepOne from "@/components/features/host-create/StepOne.vue";
 import StepTwo from "@/components/features/host-create/StepTwo.vue";
 import StepThree from "@/components/features/host-create/StepThree.vue";
@@ -148,6 +149,7 @@ const steps = ref<OnboardingStep[]>([
 
 const activeStep = computed(() => steps.value.find((step) => step.active) || steps.value[0]);
 const router = useRouter();
+const loading = ref(false);
 
 const model = ref<HostOnboardingModel>({
     location: {
@@ -167,6 +169,13 @@ definePageMeta({
     layout: "on-boarding-minimal",
 });
 
+function LoadToNext() {
+    loading.value = true;
+    setTimeout(() => {
+        navigateTo("/host/profileOverview");
+    }, 2000);
+}
+
 const next = () => {
     if (activeStep.value) {
         const currentStep = activeStep.value;
@@ -176,7 +185,7 @@ const next = () => {
             nextStep.active = true;
         } else {
             currentStep.active = true; // Keep the current step active if there's no next step
-            router.push("/host/profileOverview");
+            LoadToNext();
         }
     }
 };
@@ -204,20 +213,34 @@ watch(
 </script>
 
 <template>
-    <div class="wrapper h-[90vh] flex flex-col">
-        <div class="header flex justify-center">
-            <div class="flex"></div>
-        </div>
-        <div class="content flex-1 flex">
-            <div class="onboarding flex-1 content-center justify-center container">
-                <component :is="activeStep?.component" v-model:model="model" />
+    <div class="flex-col flex min-h-screen">
+        <div v-if="loading" class="flex-1 flex flex-col justify-center items-center text-pink-600">
+            <div class="flex flex-col my-auto">
+                <Heart />
+                <p class="text-pink-600 text-center mt-3">Working...</p>
             </div>
         </div>
-        <div class="flex justify-between p-4">
-            <div class="btn btn-outline w-[150px] md:w-[300px]" @click="prev">BACK</div>
-            <div class="flex"></div>
-            <div class="btn btn-neutral w-[150px] md:w-[300px]" @click="next">
-                {{ activeStep.id === steps.length ? "Finish" : "Next" }}
+
+        <div v-else>
+            <div class="header flex justify-center">
+                <div class="flex"></div>
+            </div>
+            <div class="wrapper h-[90vh] flex flex-col">
+                <div class="content flex-1 flex">
+                    <div class="onboarding flex-1 content-center justify-center container">
+                        <component :is="activeStep?.component" v-model:model="model" />
+                    </div>
+                </div>
+                <div class="flex justify-between p-4">
+                    <div class="btn btn-outline w-[150px] md:w-[300px]" @click="prev">BACK</div>
+                    <div class="flex"></div>
+                    <div
+                        class="block py-3 px-6 bg-pink-700 text-xl text-white rounded-md text-center font-medium mx-3 w-[150px] md:w-[300px] cursor-pointer"
+                        @click="next"
+                    >
+                        {{ activeStep.id === steps.length ? "Finish" : "Next" }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

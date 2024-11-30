@@ -35,7 +35,7 @@ function handleEnhanceProfile() {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container flex items-center justify-center h-[75vh]">
         <div class="p-6 w-full mx-auto bg-white shadow-lg rounded-lg flex mt-12">
             <div class="flex-1">
                 <h1 class="text-2xl font-bold mb-4">Your Host Profile Summary</h1>
@@ -73,13 +73,18 @@ function handleEnhanceProfile() {
                 </div>
                 <div>
                     <h2 class="text-xl font-semibold">Summary</h2>
-                    <p>
+                    <p class="">
                         Based on your inputs, we suggest enhancing your profile with vivid descriptions and visuals to
                         attract the right audience. Highlight your unique offerings to ensure volunteers connect with
                         your values and needs.
                     </p>
                 </div>
-                <button class="btn btn-secondary mt-6" @click="handleEnhanceProfile">Enhance My Profile</button>
+                <button
+                    class="py-3 px-6 bg-pink-700 text-xl text-white rounded-md font-medium w-fit mx-auto mt-6"
+                    @click="handleEnhanceProfile"
+                >
+                    enhance my profile
+                </button>
             </div>
             <div class="flex-1 ml-6 p-12">
                 <img
