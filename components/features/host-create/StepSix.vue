@@ -10,6 +10,10 @@ const props = defineProps({
         type: Object as PropType<HostOnboardingModel>,
         required: true,
     },
+    dark: {
+        type: Boolean,
+        default: false,
+    },
 });
 const emit = defineEmits(["update:model"]);
 
@@ -54,6 +58,9 @@ watch(
     aqua = "Aqua/Marine",
 } -->
 <template>
+    <nav :class="{ 'bg-white': dark, 'bg-transparent': !dark }">
+        <!-- existing nav content -->
+    </nav>
     <h3 class="mb-3">step 4</h3>
     <h2 class="text-4xl mb-3">next, lefts describe your workload</h2>
 

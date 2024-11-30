@@ -29,7 +29,7 @@ const logoSrc = computed(() => {
         :class="{
             'text-white': isHomePage && yScroll < 20,
             'bg-white !shadow-lg ': !isHomePage || (yScroll > 20 && animationIsLive),
-            ' !bg-transparent !shadow-none': props.dark,
+            ' !bg-white !shadow-none': props.dark,
         }"
     >
         <header class="container flex items-center justify-center h-full">

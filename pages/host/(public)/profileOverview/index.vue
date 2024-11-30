@@ -36,7 +36,7 @@ function handleEnhanceProfile() {
 
 <template>
     <div class="flex-1 flex flex-col p-6 container">
-        <p class="text-sm mb-6">
+        <p class="text-sm mb-6 text-center md:text-left">
             Based on your input, wanderwork's generative ai has curated what your profile
             <strong>could</strong> look like on our platform:
         </p>
