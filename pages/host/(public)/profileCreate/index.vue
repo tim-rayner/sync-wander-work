@@ -204,7 +204,7 @@ watch(
 </script>
 
 <template>
-    <div class="wrapper h-screen flex flex-col">
+    <div class="wrapper h-[90vh] flex flex-col">
         <div class="header flex justify-center">
             <div class="flex"></div>
         </div>

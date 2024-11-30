@@ -1,6 +1,10 @@
 <script setup>
 import { ref } from "vue";
 
+definePageMeta({
+    layout: "on-boarding-minimal",
+});
+
 // Placeholder for model data
 const model = ref({
     location: {
@@ -32,7 +36,7 @@ function handleEnhanceProfile() {
 
 <template>
     <div class="container">
-        <div class="p-6 w-full mx-auto bg-white shadow-lg rounded-lg flex">
+        <div class="p-6 w-full mx-auto bg-white shadow-lg rounded-lg flex mt-12">
             <div class="flex-1">
                 <h1 class="text-2xl font-bold mb-4">Your Host Profile Summary</h1>
                 <div class="mb-4">
@@ -87,7 +91,3 @@ function handleEnhanceProfile() {
         </div>
     </div>
 </template>
-
-<style scoped>
-/* Optional: Add custom styling if needed */
-</style>
