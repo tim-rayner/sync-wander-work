@@ -105,7 +105,10 @@ onMounted(() => {
         our adventurers.
     </p>
 
-    <div ref="mapContainer" class="map-container h-[500px] w-1/2 border-slate-600 border-2 rounded-xl mt-6"></div>
+    <div
+        ref="mapContainer"
+        class="map-container h-[500px] w-1/2 border-slate-600 border-1 rounded-xl mt-6 !shadow-lg"
+    ></div>
 </template>
 
 <style></style>

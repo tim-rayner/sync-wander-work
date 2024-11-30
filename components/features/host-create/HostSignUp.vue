@@ -32,7 +32,7 @@
                     </div>
                     <!-- Submit -->
                     <div class="form-control mt-6">
-                        <button type="submit" class="btn btn-primary w-full">Sign Up</button>
+                        <button type="submit" class="btn btn-secondary w-full">Sign Up</button>
                     </div>
                 </form>
             </div>
