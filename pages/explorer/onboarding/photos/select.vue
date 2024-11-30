@@ -26,16 +26,16 @@ function discover() {
 
         <Header :back="true" />
 
-        <div v-show="loading" class="flex-1 flex flex-col justify-center items-center pt-6 text-pink-600">
+        <div v-show="loading" class="flex-1 flex flex-col justify-center items-center pt-6 text-pink-700">
             <Heart />
-            <p class="text-pink-600 text-centermt-3">Working...</p>
+            <p class="text-pink-700 text-centermt-3">Working...</p>
         </div>
 
         <div v-show="!loading" class="flex-1 flex flex-col justify-start pt-6">
             <div class="mb-6">
                 <div class="grid grid-cols-3 gap-3 mb-6">
                     <button v-for="(image, index) in images" @click="selected.includes(index) ? selected.splice(selected.indexOf(index), 1) : selected.push(index)" class="w-full h-full flex items-center justify-center">
-                        <img  src="https://placehold.co/400x400" alt="" :class="{'border-4 border-pink-600' : selected.includes(index)}" />
+                        <img  src="https://placehold.co/400x400" alt="" :class="{'border-4 border-pink-700' : selected.includes(index)}" />
                     </button>
                 </div>
             </div>

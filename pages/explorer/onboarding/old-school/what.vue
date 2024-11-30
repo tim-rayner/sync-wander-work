@@ -23,7 +23,7 @@ const options = [
                 <h2 class="text-xl2 font-medium mb-3">What type of work suits you best?</h2>
                 <div class="grid grid-cols-3 gap-3 mb-6">
                     <button v-for="(option, index) in options" :key="index" @click="selected.includes(index) ? selected.splice(selected.indexOf(index), 1) : selected.push(index)" class="w-full h-full flex flex-col items-center justify-center">
-                        <img  src="https://placehold.co/400x400" alt="" class="block mb-0.5" :class="{'border-4 border-pink-600' : selected.includes(index)}" />
+                        <img  src="https://placehold.co/400x400" alt="" class="block mb-0.5" :class="{'border-4 border-pink-700' : selected.includes(index)}" />
                         <p class="font-medium">{{ option }}</p>
                     </button>
                 </div>
