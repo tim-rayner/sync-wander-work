@@ -3,8 +3,8 @@ import LogoLight from "@/assets/image/wanderwork-white.png";
 import LogoDark from "@/assets/image/wanderwork-black.png";
 
 const props = defineProps<{
-    dark: boolean;
-    minimal: boolean;
+    dark?: boolean;
+    minimal?: boolean;
 }>();
 const animationIsLive = ref(false);
 
